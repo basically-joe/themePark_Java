@@ -1,11 +1,12 @@
-public class RollerCoaster extends Attraction implements ISecurity, IReviewed{
+public class RollerCoaster extends Attraction implements ISecurity, IReviewed, ITicketed{
 
 	private int rating;
+	private double price;
 
-	public RollerCoaster(String name, Integer rating) {
+	public RollerCoaster(String name, Integer rating, Double price) {
 		super(name);
 		this.rating = rating;
-
+		this.price = price;
 	}
 
 	public boolean isAllowedTo(Visitor visitor){
@@ -23,5 +24,14 @@ public class RollerCoaster extends Attraction implements ISecurity, IReviewed{
 
 	public void setRating(Integer review){
 		this.rating = review;
+	}
+
+	public double defaultPrice(){
+		return this.price;
+	}
+
+	@Override
+	public double priceFor(Visitor visitor) {
+		return 0;
 	}
 }
