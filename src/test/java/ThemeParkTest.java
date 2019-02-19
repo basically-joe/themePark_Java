@@ -46,7 +46,6 @@ public class ThemeParkTest {
 		assertEquals(1, themePark.countRatingsInArray());
 	}
 
-
 	@Test
 	public void canGetRatingsList() {
 		assertEquals(ratingsList, themePark.getAllReviewed());
