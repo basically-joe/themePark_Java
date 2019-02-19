@@ -35,10 +35,10 @@ public class ThemeParkTest {
 	public void canGetRatingCount(){
 		assertEquals(0, themePark.countRatingsInArray());
 	}
-//
-//	@Test
-//	public void canAddToRatingList() {
-//		themePark.addRatingToArray();
-//		assertEquals(1, themePark.countRatingsInArray());
-//	}
+
+	@Test
+	public void canAddToRatingList() {
+		themePark.addRatingToArray(themePark);
+		assertEquals(1, themePark.countRatingsInArray());
+	}
 }
