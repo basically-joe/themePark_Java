@@ -33,7 +33,7 @@ public class RollerCoasterTest {
 
 	@Test
 	public void canGetRating(){
-		assertEquals(0, rollerCoaster.getRating());
+		assertEquals(5, rollerCoaster.getRating());
 	}
 
 	@Test

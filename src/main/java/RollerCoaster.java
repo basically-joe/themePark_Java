@@ -4,7 +4,7 @@ public class RollerCoaster extends Attraction implements ISecurity, IReviewed{
 
 	public RollerCoaster(String name, Integer rating) {
 		super(name);
-		this.rating = 0;
+		this.rating = rating;
 
 	}
 

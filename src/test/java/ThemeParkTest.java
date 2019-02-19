@@ -37,8 +37,14 @@ public class ThemeParkTest {
 	}
 
 	@Test
-	public void canAddToRatingList() {
-		themePark.addRatingToArray(themePark);
+	public void canAddRatingToArray(){
+		themePark.addRatingToArray(rollerCoaster);
 		assertEquals(1, themePark.countRatingsInArray());
 	}
+
+
+//	@Test
+//	public void canGetRatingsList() {
+//		assertEquals(, themePark.getAllReviewed());
+//	}
 }
