@@ -14,10 +14,10 @@ public class ThemeParkTest {
 	@Before
 	public void before() {
 		themePark = new ThemePark("Alton Towers");
-		rollerCoaster = new RollerCoaster("Oblivion");
+		rollerCoaster = new RollerCoaster("Oblivion", 5);
 		visitor = new Visitor("Jon", 28, 175, 40);
 		visitor1 = new Visitor("MiniMe", 28, 140, 40);
-		iceCreamStall = new IceCream("Joe's Ices", "Joe", "E25");
+		iceCreamStall = new IceCream("Joe's Ices", "Joe", "E25", 4);
 	}
 
 	@Test

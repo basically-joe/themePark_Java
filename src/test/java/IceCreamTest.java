@@ -8,7 +8,7 @@ public class IceCreamTest {
 
 	@Before
 	public void before(){
-		iceCreamStall = new IceCream("Joe's Ices", "Joe", "E25");
+		iceCreamStall = new IceCream("Joe's Ices", "Joe", "E25", 4);
 	}
 
 	@Test

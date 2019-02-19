@@ -1,8 +1,11 @@
 public class RollerCoaster extends Attraction implements ISecurity, IReviewed{
+
 	private int rating;
-	public RollerCoaster(String name) {
+
+	public RollerCoaster(String name, Integer rating) {
 		super(name);
-		int rating = 0;
+		this.rating = 0;
+
 	}
 
 	public boolean isAllowedTo(Visitor visitor){
@@ -15,6 +18,10 @@ public class RollerCoaster extends Attraction implements ISecurity, IReviewed{
 
 	@Override
 	public int getRating() {
-		return rating;
+		return this.rating;
+	}
+
+	public void setRating(Integer review){
+		this.rating = review;
 	}
 }
