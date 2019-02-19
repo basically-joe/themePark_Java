@@ -9,7 +9,7 @@ public class ThemePark implements IReviewed {
 	private Stall stall;
 	private Attraction attraction;
 	private Visitor visitor;
-	private HashMap visitorAttraction;
+	protected HashMap visitorAttraction;
 
 
 	public ThemePark(String name) {

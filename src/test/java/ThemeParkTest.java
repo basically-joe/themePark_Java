@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,6 +14,7 @@ public class ThemeParkTest {
 	Visitor visitor1;
 	IceCream iceCreamStall;
 	private ArrayList<IReviewed> ratingsList;
+	private HashMap visitorAttraction;
 
 	@Before
 	public void before() {
@@ -22,6 +24,7 @@ public class ThemeParkTest {
 		visitor1 = new Visitor("MiniMe", 28, 140, 40);
 		iceCreamStall = new IceCream("Joe's Ices", "Joe", "E25", 4);
 		ratingsList = new ArrayList<>();
+		this.visitorAttraction = new HashMap();
 	}
 
 	@Test
@@ -50,4 +53,10 @@ public class ThemeParkTest {
 	public void canGetRatingsList() {
 		assertEquals(ratingsList, themePark.getAllReviewed());
 	}
+
+	@Test
+	public void canAddVisitorAndAttractionToHashMap() {
+		assertEquals(themePark.visitorAttraction, themePark.visitor(visitor, rollerCoaster));
+	}
+
 }
