@@ -13,4 +13,9 @@ public class IceCream extends Stall implements IReviewed{
 	public int getRating() {
 		return this.rating;
 	}
+
+	public void setRating(Integer review) {
+		this.rating = review;
+	}
+
 }
