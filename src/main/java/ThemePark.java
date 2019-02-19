@@ -30,8 +30,8 @@ public class ThemePark implements IReviewed {
 		ratingsList.add(review);
 	}
 
-	public IReviewed getAllReviewed() {
-		 return (IReviewed) this.ratingsList;
+	public ArrayList<IReviewed> getAllReviewed() {
+		 return this.ratingsList;
 	}
 
 }

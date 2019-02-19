@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class ThemeParkTest {
@@ -10,6 +12,7 @@ public class ThemeParkTest {
 	Visitor visitor;
 	Visitor visitor1;
 	IceCream iceCreamStall;
+	private ArrayList<IReviewed> ratingsList;
 
 	@Before
 	public void before() {
@@ -18,6 +21,7 @@ public class ThemeParkTest {
 		visitor = new Visitor("Jon", 28, 175, 40);
 		visitor1 = new Visitor("MiniMe", 28, 140, 40);
 		iceCreamStall = new IceCream("Joe's Ices", "Joe", "E25", 4);
+		ratingsList = new ArrayList<>();
 	}
 
 	@Test
@@ -43,8 +47,8 @@ public class ThemeParkTest {
 	}
 
 
-//	@Test
-//	public void canGetRatingsList() {
-//		assertEquals(, themePark.getAllReviewed());
-//	}
+	@Test
+	public void canGetRatingsList() {
+		assertEquals(ratingsList, themePark.getAllReviewed());
+	}
 }
