@@ -40,17 +40,18 @@ public class ThemeParkTest {
 
 	@Test
 	public void canGetRatingCount(){
-		assertEquals(0, themePark.countRatingsInArray());
+		assertEquals(0, themePark.countRatingsInHash());
 	}
 
 	@Test
 	public void canAddRatingOfAttractionToHashMap(){
 		assertEquals(themePark.attractionRating, themePark.addAttractionRating(rollerCoaster));
+		assertEquals(1, themePark.countRatingsInHash());
 	}
 
 	@Test
-	public void canGetRatingsList() {
-		assertEquals(ratingsList, themePark.getAllReviewed());
+	public void canGetAllAttractionRatings() {
+		assertEquals(themePark.attractionRating, themePark.getAllReviewed());
 	}
 
 	@Test

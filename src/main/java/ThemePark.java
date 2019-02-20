@@ -34,8 +34,8 @@ public class ThemePark implements IReviewed {
 		return this.name;
 	}
 
-	public int countRatingsInArray() {
-		return ratingsList.size();
+	public int countRatingsInHash() {
+		return attractionRating.size();
 	}
 
 	public HashMap addAttractionRating(Attraction attraction){
@@ -43,12 +43,14 @@ public class ThemePark implements IReviewed {
 		return this.attractionRating;
 	}
 
-	public ArrayList<IReviewed> getAllReviewed() {
-		 return this.ratingsList;
-	}
 
 	public HashMap visitor(Visitor visitor, Attraction attraction) {
 		this.visitorAttraction.put(visitor.getName(), attraction.getName());
 		return this.visitorAttraction;
 	}
+
+	public HashMap getAllReviewed() {
+		return this.attractionRating;
+	}
+
 }
