@@ -34,13 +34,13 @@ public class ThemePark implements IReviewed {
 		return this.name;
 	}
 
-	public int countRatingsInHash() {
+	public int countAttractionRatingsInHash() {
 		return attractionRating.size();
 	}
 
 	public HashMap addAttractionRating(Attraction attraction){
 		this.attractionRating.put(attraction.getName(), attraction.getRating());
-		return this.attractionRating;
+		return this.getAllReviewed();
 	}
 
 

@@ -40,13 +40,13 @@ public class ThemeParkTest {
 
 	@Test
 	public void canGetRatingCount(){
-		assertEquals(0, themePark.countRatingsInHash());
+		assertEquals(0, themePark.countAttractionRatingsInHash());
 	}
 
 	@Test
 	public void canAddRatingOfAttractionToHashMap(){
 		assertEquals(themePark.attractionRating, themePark.addAttractionRating(rollerCoaster));
-		assertEquals(1, themePark.countRatingsInHash());
+		assertEquals(1, themePark.countAttractionRatingsInHash());
 	}
 
 	@Test
