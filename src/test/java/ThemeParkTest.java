@@ -44,9 +44,8 @@ public class ThemeParkTest {
 	}
 
 	@Test
-	public void canAddRatingToArray(){
-		themePark.addRatingToArray(rollerCoaster);
-		assertEquals(1, themePark.countRatingsInArray());
+	public void canAddRatingOfAttractionToHashMap(){
+		assertEquals(themePark.attractionRating, themePark.addAttractionRating(rollerCoaster));
 	}
 
 	@Test

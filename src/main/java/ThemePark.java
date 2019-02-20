@@ -10,6 +10,7 @@ public class ThemePark implements IReviewed {
 	private Attraction attraction;
 	private Visitor visitor;
 	protected HashMap visitorAttraction;
+	protected HashMap attractionRating;
 
 
 	public ThemePark(String name) {
@@ -20,6 +21,8 @@ public class ThemePark implements IReviewed {
 		this.stall = stall;
 		this.visitor = visitor;
 		this.visitorAttraction = new HashMap();
+		this.attractionRating = new HashMap();
+
 	}
 
 	@Override
@@ -35,8 +38,9 @@ public class ThemePark implements IReviewed {
 		return ratingsList.size();
 	}
 
-	public void addRatingToArray(IReviewed review){
-		ratingsList.add(review);
+	public HashMap addAttractionRating(Attraction attraction){
+		this.attractionRating.put(attraction.getName(), attraction.getRating());
+		return this.attractionRating;
 	}
 
 	public ArrayList<IReviewed> getAllReviewed() {
